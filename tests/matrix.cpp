@@ -14,14 +14,14 @@ SCENARIO("matrix new with params","[new with params]"){
 
 SCENARIO("matrix operator+","[oper+]"){
     Matrix matrix1(2,2), matrix2(2,2);
-    ofstream file1("C:/Users/User/Documents/A1.txt");
+    ofstream file1("A.txt");
     file1 << "1 2 2 2";
     file1.close();
-    ofstream file2("C:/Users/User/Documents/B1.txt");
+    ofstream file2("B.txt");
     file2 << "5 6 6 6";
     file2.close();
-    matrix1.Read("C:/Users/User/Documents/A1.txt");
-    matrix2.Read("C:/Users/User/Documents/B1.txt");
+    matrix1.Read("A.txt");
+    matrix2.Read("B.txt");
     REQUIRE(matrix1.Element(0,0) + matrix2.Element(0,0) == 6);
     REQUIRE(matrix1.Element(0,1) + matrix2.Element(0,1) == 8);
     REQUIRE(matrix1.Element(1,0) + matrix2.Element(1,0) == 8);
@@ -30,14 +30,14 @@ SCENARIO("matrix operator+","[oper+]"){
 
 SCENARIO("matrix operator-","[oper-]"){
     Matrix matrix1(2,2), matrix2(2,2);
-    ofstream file1("C:/Users/User/Documents/A1.txt");
+    ofstream file1("A.txt");
     file1 << "1 2 2 2";
     file1.close();
-    ofstream file2("C:/Users/User/Documents/B1.txt");
+    ofstream file2("B.txt");
     file2 << "5 6 6 6";
     file2.close();
-    matrix1.Read("C:/Users/User/Documents/A1.txt");
-    matrix2.Read("C:/Users/User/Documents/B1.txt");
+    matrix1.Read("A.txt");
+    matrix2.Read("B.txt");
     REQUIRE(matrix2.Element(0,0) - matrix1.Element(0,0) == 4);
     REQUIRE(matrix2.Element(0,1) - matrix1.Element(0,1) == 4);
     REQUIRE(matrix2.Element(1,0) - matrix1.Element(1,0) == 4);
@@ -46,14 +46,14 @@ SCENARIO("matrix operator-","[oper-]"){
 
 SCENARIO("matrix operator*", "[oper*]") {
     Matrix matrix1(2,2), matrix2(2,2);
-    ofstream file1("C:/Users/User/Documents/A1.txt");
+    ofstream file1("A.txt");
     file1 << "1 2 2 2";
     file1.close();
-    ofstream file2("C:/Users/User/Documents/B1.txt");
+    ofstream file2("B.txt");
     file2 << "5 6 6 6";
     file2.close();
-    matrix1.Read("C:/Users/User/Documents/A1.txt");
-    matrix2.Read("C:/Users/User/Documents/B1.txt");
+    matrix1.Read("A.txt");
+    matrix2.Read("B.txt");
     REQUIRE(matrix1.Element(0,0) * matrix2.Element(0,0) + matrix1.Element(0,1) * matrix2.Element(1,0) == 17);
     REQUIRE(matrix1.Element(0,0) * matrix2.Element(0,1) + matrix1.Element(0,1) * matrix2.Element(1,1) == 18);
     REQUIRE(matrix1.Element(1,0) * matrix2.Element(0,0) + matrix1.Element(1,1) * matrix2.Element(1,0) == 22);
@@ -62,14 +62,14 @@ SCENARIO("matrix operator*", "[oper*]") {
 
 SCENARIO("matrix operator==" , "[oper==]") {
     Matrix matrix1(2,2), matrix2(2,2);
-    ofstream file1("C:/Users/User/Documents/A1.txt");
+    ofstream file1("A.txt");
     file1 << "2 2 2 2";
     file1.close();
-    ofstream file2("C:/Users/User/Documents/B1.txt");
+    ofstream file2("B.txt");
     file2 << "2 2 2 2";
     file2.close();
-    matrix1.Read("C:/Users/User/Documents/A1.txt");
-    matrix2.Read("C:/Users/User/Documents/B1.txt");
+    matrix1.Read("A.txt");
+    matrix2.Read("B.txt");
     for (int i = 0; i < matrix1.Rows(); i++)
     {
         for (int j = 0; j < matrix1.Columns(); j++)
@@ -82,10 +82,10 @@ SCENARIO("matrix operator==" , "[oper==]") {
 
 SCENARIO("matrix operator=" , "[oper=]") {
     Matrix matrix1(2,2), matrix2(2,2);
-    ofstream file1("C:/Users/User/Documents/A1.txt");
+    ofstream file1("A.txt");
     file1 << "1 2 2 2";
     file1.close();
-    matrix1.Read("C:/Users/User/Documents/A1.txt");
+    matrix1.Read("A.txt");
     matrix2 = matrix1;
     REQUIRE(matrix1.Element(0,0) == 1);
     REQUIRE(matrix1.Element(0,1) == 2);
