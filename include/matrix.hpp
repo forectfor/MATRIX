@@ -29,4 +29,4 @@ public:
     friend ostream& operator<<(ostream& os,const Matrix& other);
     friend istream& operator>>(istream& is, Matrix& other);
 };
-#endif LAB_5
+#endif
