@@ -1,3 +1,5 @@
+#ifndef LAB_5
+#define LAB_5
 #include <iostream>
 #include <fstream>
 #include <cassert>
@@ -25,4 +27,6 @@ public:
     Matrix operator=(Matrix& other)const;
     bool operator==(Matrix& other)const;
     friend ostream& operator<<(ostream& os,const Matrix& other);
+    friend istream& operator>>(istream& is, Matrix& other);
 };
+#endif LAB_5
