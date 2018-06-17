@@ -125,3 +125,21 @@ ostream& operator<<(ostream& os,const Matrix& other){
     }
     return os;
 }
+
+istream& operator>>(istream& is, Matrix& other) {
+
+		for (int i = 0; i < other.rows; i++) {
+
+			for (int j = 0; j < other.columns; j++) {
+
+				cout << "arr[" << i << "][" << j << "] = ";
+
+				is >> other.arr[i][j];
+
+			}
+
+		}
+
+		return is;
+
+	}
