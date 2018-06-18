@@ -52,4 +52,4 @@ public:
     friend ostream& operator<<(ostream& os,const Matrix& other);
     friend istream& operator>>(istream& is, Matrix& other);
 };
-#endif
+#endif//директива препроцессорной обертки работает только без имени (при тестировании в travic-ci возникает ошибка компиляции).
