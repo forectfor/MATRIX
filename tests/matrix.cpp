@@ -1,8 +1,12 @@
-#include "catch.hpp"
+//Используется тестовый фреймворк Catch. Интеграция Catch с CMake довольно проста, так как это только библиотека для заголовков.
+//Можно сделать проект CMake зависимым от Catch с помощью find_package: в CMakeLists.txt добавляем: find_package(Catch REQUIRED).
+//Особенности Catch: имена тестов (сценариев) - это обычные строки (т. к. имя теста нужно только для того чтобы один раз описать что он тестирует, 
+//чтобы это описание потом записалось в лог с результатами тестирования);
+#include "catch.hpp"//подключение библиотеки Catch.
 #include "matrix.hpp"
-SCENARIO("matrix new w/o params","[new w/o params]"){
+SCENARIO("matrix new w/o params","[new w/o params]"){//тест (сценарий).
     Matrix matrix;
-    REQUIRE(matrix.Rows() == 0);
+    REQUIRE(matrix.Rows() == 0);//проверка справедливости выражения.
     REQUIRE(matrix.Columns() == 0);
 }
 
@@ -14,8 +18,8 @@ SCENARIO("matrix new with params","[new with params]"){
 
 SCENARIO("matrix operator+","[oper+]"){
     Matrix matrix1(2,2), matrix2(2,2);
-    ofstream file1("A.txt");
-    file1 << "1 2 2 2";
+    ofstream file1("A.txt");//имя файла должно быть коротким (иначе почему-то не производится запись в него).
+    file1 << "1 2 2 2";//сериализация - тесты для ввода в поток.
     file1.close();
     ofstream file2("B.txt");
     file2 << "5 6 6 6";
