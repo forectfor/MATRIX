@@ -1,2 +1,2 @@
 # matrixtr
-[![Build Status](https://travis-ci.org/Papich228/matrixtr.svg?branch=master)](https://travis-ci.org/Papich228)
+[![Build Status](https://travis-ci.org/forectfor/MATRIX.svg?branch=master)](https://travis-ci.org/forectfor)
